@@ -1,31 +1,27 @@
 import React from 'react';
 
 const ProductList = ({productList=[]}) => {
-    
   return (
+
     <>
-    { 
-        
-        productList.map((products,index) => {
-        if (products){
-          return (
-            <div key={products.nombre}>
-              <h1>{products.nombre}</h1>
-	    </div>	
-    	   )	
-    	 } return null
-    }) }
-    </>
+    {productList.length < 10 && (
+      <ul className="products">
+          {productList.map(products => (
+              
+              <li className="btn btn-info"key={products.nombre}>
+                  <p>Producto: {products.nombre}</p>
+                  <p>Relevancia: {products.relevancia}</p>
+                  <p>Precio:{products.precio}</p>
+                  <p>Fabricante: {products.fab.nombre}</p>
+              </li>
+          
+          ))}
+      </ul>
+      
+  )}
+  </>
+    
   );
 }
 
 export default ProductList
-
-// {results.length > 0 && (
-//     <ul className="results">
-//         {results.map(movie => (
-//             <li key={movie.id}>
-//                 <ResultCard movie={movie}/>
-//             </li>
-//         ))}
-//     </ul>

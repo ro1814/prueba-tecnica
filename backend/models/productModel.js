@@ -1,10 +1,10 @@
 import mongoose from 'mongoose'
 
 const productSchema = mongoose.Schema ({
-    fab:{//Puede ser que vaya user ATENCION!!!!
+    fab: {
         type: mongoose.Schema.Types.ObjectId,
         required: true,
-        ref:'Fabrica'
+        ref:'Fabrica',
     },
     nombre:{
         type: String,

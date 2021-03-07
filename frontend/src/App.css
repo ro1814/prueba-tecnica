@@ -1,6 +1,24 @@
 .App {
   text-align: center;
 }
+a:link, a:visited, a:active {
+  text-decoration:none;
+  color: white;
+  
+}
+h1 {
+  color: #029ebd;
+}
+th{
+  color: #029ebd;
+}
+input {
+  border: #029ebd;
+  width: 50%;
+}
+ul li {
+  list-style:none
+}
 
 .App-logo {
   height: 40vmin;

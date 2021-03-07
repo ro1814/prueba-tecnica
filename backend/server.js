@@ -1,12 +1,12 @@
 import express from 'express'
 import dotenv from 'dotenv'
 import connectDB from './config/db.js'
-import colors from 'colors'
 import cors from 'cors'
-
+import fabRoutes from './routes/fabRoutes.js'
 import productRoutes from './routes/productRoutes.js'
 
 //Cuando se agregan archivos (de cualquier tipo) seguir el ejemplo: import products from './data/products.js'
+
 dotenv.config();
 
 connectDB()
@@ -18,6 +18,7 @@ app.get('/', (req, res) => {
 })
 
 app.use('/api/products', productRoutes)
+app.use('/api/fabs', fabRoutes)
 
 
 app.use(cors())

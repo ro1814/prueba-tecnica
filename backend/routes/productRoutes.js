@@ -3,11 +3,6 @@ import asyncHandler from 'express-async-handler'
 const router = express.Router()
 import Product from '../models/productModel.js'
 
-// router.get('/', (req, res) => {
-//     res.send('API is running...')
-// })
-
-
 // @desc Fetch all products 
 // @route GET /api/products
 // @access Public
@@ -15,12 +10,8 @@ import Product from '../models/productModel.js'
 
 router.get('/', asyncHandler(async (req, res) => {
     const products = await Product.find({})
+    .populate('fab')
     res.json(products)
-    
-
-
-    
-
 }))
 
 // @desc Fetch single products 

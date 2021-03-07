@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import SearchBar from './SearchBar';
 import ProductList from './ProductList';
@@ -28,7 +27,7 @@ const SearchPage = (props) => {
 	
   return (
     <>
-      <h1>Product list</h1>
+      <h1>Inventario de frutas</h1>
       <SearchBar 
        input={input} 
        onChange={updateInput}
