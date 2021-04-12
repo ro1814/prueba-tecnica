@@ -24,4 +24,4 @@ const ProductList = ({productList=[]}) => {
   );
 }
 
-export default ProductList
+export default ProductListx
